@@ -50,7 +50,7 @@ $(addprefix $(DIR_OBJ_ASM)/, %.o) : %.s $(DIR_INC)
 	@printf "\e[32m[✔]\e[0m\n"
 
 clean :
-	@if [ -e '$(DIR_OBJ)' ]; then \
+	@if [ -e '$(DIR_OBJ_ASM)' ]; then \
 		/bin/rm	-rf $(DIR_OBJ); \
 		/bin/rm	-rf $(DIR_OBJ_ASM); \
 		printf "\e[32m[✔]\e[0m project %s cleaned.\n" $(NAME); \
@@ -67,6 +67,10 @@ re : fclean all
 
 $(DIR_OBJ_ASM) :
 	@/bin/mkdir $(DIR_OBJ_ASM); \
+		for DIR in $(DIR_LIST); \
+		do \
+		/bin/mkdir $(DIR_OBJ_ASM)/$$DIR; \
+		done
 
 $(DIR_OBJ) :
 	@/bin/mkdir $(DIR_OBJ); \
