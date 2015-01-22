@@ -15,28 +15,25 @@
 ;                                                                              ;
 ; ============================================================================ ;
 
-global _ft_bzero
+global _ft_strlen
 
 section .text
 
-_ft_bzero:
+_ft_strlen:
 	push rbp
 	mov rbp, rsp
 	; core
-	cmp rdi, 0
-	jz end
+	mov rax, 0
 	mov rbx, rdi
-	mov rax, rsi
 
-bzero_loop:
-	cmp rax, 0
-	jle end
-	; looping
-	mov byte[rbx], 0
+lp:
+	cmp byte[rbx], 0x0
+	jz end
+	inc rax
 	inc rbx
-	dec rax
-	jmp bzero_loop
+	jmp lp
 
 end:
 	mov rsp, rbp
 	pop rbp
+	ret

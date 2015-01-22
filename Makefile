@@ -24,6 +24,7 @@ INCS			= -I ./inc
 LIBS			=
 
 SRC				= $(DIR_SRC)/ft_bzero.s \
+				  $(DIR_SRC)/ft_strlen.s \
 
 DIR_SRC			= src
 DIR_INC			= inc

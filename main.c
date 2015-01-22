@@ -18,16 +18,16 @@
 #include <stdio.h>
 #include "libftasm.h"
 
-void log (char * str)
+void logit (char * str)
 {
 	printf("\n\033[33m > %s\033[0m\n\n", str);
 };
 
 int main (void)
 {
-	char		str[3] = "jui";
+	logit("ft_bzero");
 
-	log("ft_bzero");
+	char str[4] = "jui";
 
 	printf("str[0] = %d\n", str[0]);
 	printf("str[1] = %d\n", str[1]);
@@ -39,6 +39,21 @@ int main (void)
 	printf("str[0] = %d\n", str[0]);
 	printf("str[1] = %d\n", str[1]);
 	printf("str[2] = %d\n", str[2]);
+
+	printf("test with null\n");
+	ft_bzero(NULL, 5);
+
+	logit("ft_strlen");
+
+	char str2[6] = "abcde";
+
+	printf("str = %s\n", str2);
+	printf("len = %d\n", ft_strlen(str2));
+
+	char str3[2] = "a";
+
+	printf("str = %s\n", str3);
+	printf("len = %d\n", ft_strlen(str3));
 
 	printf("\n");
 
