@@ -15,10 +15,11 @@
 #                                                                              #
 # ============================================================================ #
 
-NAME			= libftasm.a
+NAME			= libfts.a
 TEST			= test
 
 CC				= gcc
+CC_ASM			= nasm
 FLAG			= -Wall -Werror -Wextra -pedantic
 INCS			= -I ./inc
 LIBS			=
@@ -42,12 +43,12 @@ $(NAME) : $(DIR_OBJ_ASM) $(OBJ_ASM)
 	@ar rc $(NAME) $(OBJ_ASM)
 	@ranlib $(NAME)
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
-	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created libftasm.a"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created libfts.a"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 
 $(addprefix $(DIR_OBJ_ASM)/, %.o) : %.s $(DIR_INC)
 	@printf "compiling \e[33m%-41s\e[0m" "$@"
-	@nasm -f macho64 -o $@ $<
+	@$(CC_ASM) -f macho64 -o $@ $<
 	@printf "\e[32m[✔]\e[0m\n"
 
 clean :
@@ -77,6 +78,9 @@ $(DIR_OBJ) :
 	@/bin/mkdir $(DIR_OBJ); \
 
 $(TEST): $(NAME) main.c
-	$(CC) $(INCS) -L . -lftasm main.c -o $@
+	@$(CC) $(INCS) -L . -lfts main.c -o $@
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created test"
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
 
 .PHONY:	clean fclean re
