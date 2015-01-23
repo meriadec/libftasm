@@ -129,6 +129,21 @@ int main (void)
 	printf("%c %d\n", '/', ft_isalnum('/'));
 	printf("%c %d\n", ':', ft_isalnum(':'));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_isascii
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_isascii");
+
+	printf("%c %d\n", 'a', ft_isascii('a'));
+	printf("%c %d\n", 209, ft_isascii(209));
+	printf("%c %d\n", '█', ft_isascii('█'));
+	printf("%c %d\n", 0, ft_isascii(0));
+	printf("%c %d\n", 127, ft_isascii(127));
+	printf("%c %d\n", 128, ft_isascii(128));
+
 	printf("\n");
 	return (0);
 }
