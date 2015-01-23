@@ -88,6 +88,20 @@ int main (void)
 	printf("%c %d\n", '[', ft_isalpha('['));
 	printf("%c %d\n", '{', ft_isalpha('{'));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_isdigit
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_isdigit");
+
+	printf("%c %d\n", '1', ft_isdigit('1'));
+	printf("%c %d\n", '5', ft_isdigit('5'));
+	printf("%c %d\n", '0', ft_isdigit('0'));
+	printf("%c %d\n", '/', ft_isdigit('/'));
+	printf("%c %d\n", ':', ft_isdigit(':'));
+
 	printf("\n");
 	return (0);
 }
