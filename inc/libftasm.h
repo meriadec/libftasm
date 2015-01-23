@@ -19,6 +19,6 @@
 # define LIBFT_ASM
 
 void				ft_bzero	(void * s, size_t n);
-unsigned int		ft_strlen	(char * str);
+size_t				ft_strlen	(char * str);
 
 #endif
