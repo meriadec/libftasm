@@ -139,7 +139,6 @@ int main (void)
 
 	printf("%c %d\n", 'a', ft_isascii('a'));
 	printf("%c %d\n", 209, ft_isascii(209));
-	printf("%c %d\n", '█', ft_isascii('█'));
 	printf("%c %d\n", 0, ft_isascii(0));
 	printf("%c %d\n", 127, ft_isascii(127));
 	printf("%c %d\n", 128, ft_isascii(128));
