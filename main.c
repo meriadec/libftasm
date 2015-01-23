@@ -155,6 +155,22 @@ int main (void)
 	printf("%c %d\n", 33, ft_isprint(33));
 	printf("%c %d\n", 128, ft_isprint(128));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_toupper
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_toupper");
+
+	printf("%c --> %c\n", 'a', ft_toupper('a'));
+	printf("%c --> %c\n", 'z', ft_toupper('z'));
+	printf("%c --> %c\n", '`', ft_toupper('`'));
+	printf("%c --> %c\n", '{', ft_toupper('{'));
+	printf("%c --> %c\n", 'A', ft_toupper('A'));
+	printf("%c --> %c\n", '2', ft_toupper('2'));
+	printf("%c --> %c\n", '-', ft_toupper('-'));
+
 	printf("\n");
 	return (0);
 }
