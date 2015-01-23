@@ -28,5 +28,6 @@ int					ft_isascii	(int c);
 int					ft_print	(int c);
 
 int					ft_toupper	(int c);
+int					ft_tolower	(int c);
 
 #endif

@@ -171,6 +171,22 @@ int main (void)
 	printf("%c --> %c\n", '2', ft_toupper('2'));
 	printf("%c --> %c\n", '-', ft_toupper('-'));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_tolower
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_tolower");
+
+	printf("%c --> %c\n", 'a', ft_tolower('a'));
+	printf("%c --> %c\n", 'z', ft_tolower('z'));
+	printf("%c --> %c\n", '`', ft_tolower('`'));
+	printf("%c --> %c\n", '{', ft_tolower('{'));
+	printf("%c --> %c\n", 'A', ft_tolower('A'));
+	printf("%c --> %c\n", '2', ft_tolower('2'));
+	printf("%c --> %c\n", '-', ft_tolower('-'));
+
 	printf("\n");
 	return (0);
 }
