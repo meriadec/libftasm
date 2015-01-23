@@ -16,12 +16,10 @@
 /* ========================================================================== */
 
 #include <stdio.h>
+#include <string.h>
 #include "libftasm.h"
 
-void logit (char * str)
-{
-	printf("\n\033[33m > %s\033[0m\n\n", str);
-};
+void logit (char * str);
 
 int main (void)
 {
@@ -93,3 +91,16 @@ int main (void)
 	printf("\n");
 	return (0);
 }
+
+void logit (char * str)
+{
+	printf("\n\033[33m > %s\n", str);
+	printf("   ");
+
+	int i = 0;
+	while (i < strlen(str)) {
+		printf("-");
+		i++;
+	}
+	printf("\033[0m\n\n");
+};
