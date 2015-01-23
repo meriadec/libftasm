@@ -143,6 +143,18 @@ int main (void)
 	printf("%c %d\n", 127, ft_isascii(127));
 	printf("%c %d\n", 128, ft_isascii(128));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_isprint
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_isprint");
+
+	printf("%c %d\n", 32, ft_isprint(32));
+	printf("%c %d\n", 33, ft_isprint(33));
+	printf("%c %d\n", 128, ft_isprint(128));
+
 	printf("\n");
 	return (0);
 }

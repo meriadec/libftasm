@@ -30,6 +30,7 @@ SRC				= $(DIR_SRC)/ft_bzero.s \
 				  $(DIR_SRC)/ft_isdigit.s \
 				  $(DIR_SRC)/ft_isalnum.s \
 				  $(DIR_SRC)/ft_isascii.s \
+				  $(DIR_SRC)/ft_isprint.s \
 
 DIR_SRC			= src
 DIR_INC			= inc
