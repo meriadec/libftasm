@@ -30,4 +30,6 @@ int					ft_print	(int c);
 int					ft_toupper	(int c);
 int					ft_tolower	(int c);
 
+int					ft_puts		(char * const str);
+
 #endif
