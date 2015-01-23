@@ -69,7 +69,27 @@ int main (void)
 	printf("str = %s\n", str3);
 	printf("len = %d\n", ft_strlen(str3));
 
-	printf("\n");
+	/**
+	** -------------------------------------------------------------------------
+	** ft_isalpha
+	** -------------------------------------------------------------------------
+	**/
 
+	logit("ft_isalpha");
+
+	printf("%c %d\n", 'a', ft_isalpha('a'));
+	printf("%c %d\n", 'A', ft_isalpha('A'));
+
+	printf("%c %d\n", 'z', ft_isalpha('z'));
+	printf("%c %d\n", 'Z', ft_isalpha('Z'));
+
+	printf("%c %d\n", '@', ft_isalpha('@'));
+	printf("%c %d\n", '4', ft_isalpha('4'));
+	printf("%c %d\n", '_', ft_isalpha('_'));
+	printf("%c %d\n", '!', ft_isalpha('!'));
+	printf("%c %d\n", '[', ft_isalpha('['));
+	printf("%c %d\n", '{', ft_isalpha('{'));
+
+	printf("\n");
 	return (0);
 }
