@@ -102,6 +102,33 @@ int main (void)
 	printf("%c %d\n", '/', ft_isdigit('/'));
 	printf("%c %d\n", ':', ft_isdigit(':'));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_isalnum
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_isalnum");
+
+	printf("%c %d\n", 'a', ft_isalnum('a'));
+	printf("%c %d\n", 'A', ft_isalnum('A'));
+
+	printf("%c %d\n", 'z', ft_isalnum('z'));
+	printf("%c %d\n", 'Z', ft_isalnum('Z'));
+
+	printf("%c %d\n", '@', ft_isalnum('@'));
+	printf("%c %d\n", '4', ft_isalnum('4'));
+	printf("%c %d\n", '_', ft_isalnum('_'));
+	printf("%c %d\n", '!', ft_isalnum('!'));
+	printf("%c %d\n", '[', ft_isalnum('['));
+	printf("%c %d\n", '{', ft_isalnum('{'));
+
+	printf("%c %d\n", '1', ft_isalnum('1'));
+	printf("%c %d\n", '5', ft_isalnum('5'));
+	printf("%c %d\n", '0', ft_isalnum('0'));
+	printf("%c %d\n", '/', ft_isalnum('/'));
+	printf("%c %d\n", ':', ft_isalnum(':'));
+
 	printf("\n");
 	return (0);
 }
