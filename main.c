@@ -215,6 +215,13 @@ int main (void)
 	printf("string 2 = %s\n", chips);
 	printf("  result = %s\n", ft_strcat(toast, chips));
 
+	char * toto = NULL;
+	char * tata = NULL;
+
+	printf("string 1 = %s\n", toto);
+	printf("string 2 = %s\n", tata);
+	printf("  result = %s\n", ft_strcat(toto, tata));
+
 	printf("\n");
 	return (0);
 }
