@@ -17,6 +17,6 @@ part 1:
 part 2:
 
 	[x] strlen
-	[ ] memset
+	[x] memset
 	[ ] memcpy
 	[ ] strdup

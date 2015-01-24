@@ -222,6 +222,28 @@ int main (void)
 	printf("string 2 = %s\n", tata);
 	printf("  result = %s\n", ft_strcat(toto, tata));
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_memset
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_memset");
+
+	char	mems[4];
+
+	ft_bzero(mems, 4);
+	printf("str[0] = %d\n", mems[0]);
+	printf("str[1] = %d\n", mems[1]);
+	printf("str[2] = %d\n", mems[2]);
+	printf("str[3] = %d\n", mems[3]);
+	printf("--- memseting with 'a' ---\n");
+	ft_memset(mems, 'a', 4);
+	printf("str[0] = %c (%d)\n", mems[0], mems[0]);
+	printf("str[1] = %c (%d)\n", mems[1], mems[1]);
+	printf("str[2] = %c (%d)\n", mems[2], mems[2]);
+	printf("str[3] = %c (%d)\n", mems[3], mems[3]);
+
 	printf("\n");
 	return (0);
 }

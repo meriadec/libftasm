@@ -19,6 +19,7 @@
 # define LIBFT_ASM
 
 void				ft_bzero	(void * s, size_t n);
+void *				ft_memset	(void * b, int c, size_t len);
 size_t				ft_strlen	(char * str);
 
 int					ft_isalpha	(int c);
