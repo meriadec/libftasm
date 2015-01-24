@@ -20,6 +20,7 @@
 
 void				ft_bzero	(void * s, size_t n);
 void *				ft_memset	(void * b, int c, size_t len);
+void *				ft_memcpy	(void * s1, const void * s2, size_t n);
 size_t				ft_strlen	(char * str);
 
 int					ft_isalpha	(int c);

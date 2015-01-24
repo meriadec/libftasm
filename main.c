@@ -244,6 +244,43 @@ int main (void)
 	printf("str[2] = %c (%d)\n", mems[2], mems[2]);
 	printf("str[3] = %c (%d)\n", mems[3], mems[3]);
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_memcpy
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_memcpy");
+
+	char	memc1[3];
+	char	memc2[3];
+
+	ft_bzero(memc2, 3);
+
+	memc1[0] = 'a';
+	memc1[1] = 'b';
+	memc1[2] = 'c';
+
+	printf("str 1 [0] = %c (%d)\n", memc1[0], memc1[0]);
+	printf("str 1 [1] = %c (%d)\n", memc1[1], memc1[1]);
+	printf("str 1 [2] = %c (%d)\n", memc1[2], memc1[2]);
+	printf("\n");
+	printf("str 2 [0] = %c (%d)\n", memc2[0], memc2[0]);
+	printf("str 2 [1] = %c (%d)\n", memc2[1], memc2[1]);
+	printf("str 2 [2] = %c (%d)\n", memc2[2], memc2[2]);
+	printf("\n");
+	printf("--- memcpy str 1 into str 2 ---\n");
+	printf("\n");
+	ft_memcpy(memc2, memc1, 3);
+	printf("str 2 [0] = %c (%d)\n", memc2[0], memc2[0]);
+	printf("str 2 [1] = %c (%d)\n", memc2[1], memc2[1]);
+	printf("str 2 [2] = %c (%d)\n", memc2[2], memc2[2]);
+	printf("\n");
+	printf("--- test with null ---\n");
+	ft_memcpy(memc2, NULL, 3);
+	ft_memcpy(NULL, memc1, 3);
+	printf("--- no segfault ---\n");
+
 	printf("\n");
 	return (0);
 }

@@ -36,6 +36,7 @@ SRC				= $(DIR_SRC)/ft_bzero.s \
 				  $(DIR_SRC)/ft_puts.s \
 				  $(DIR_SRC)/ft_strcat.s \
 				  $(DIR_SRC)/ft_memset.s \
+				  $(DIR_SRC)/ft_memcpy.s \
 
 DIR_SRC			= src
 DIR_INC			= inc
