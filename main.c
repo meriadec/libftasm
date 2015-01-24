@@ -197,6 +197,24 @@ int main (void)
 
 	ft_puts("foo bar baz");
 
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strcat
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strcat");
+
+	char		toast[7] = "abc";
+	char		chips[4] = "def";
+
+	toast[3] = '\0';
+	toast[6] = '\0';
+
+	printf("string 1 = %s\n", toast);
+	printf("string 2 = %s\n", chips);
+	printf("  result = %s\n", ft_strcat(toast, chips));
+
 	printf("\n");
 	return (0);
 }

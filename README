@@ -4,7 +4,7 @@ libftasm
 part 1:
 
 	[x] bzero
-	[ ] strcat
+	[x] strcat
 	[x] isalpha
 	[x] isdigit
 	[x] isalnum
