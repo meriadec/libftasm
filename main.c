@@ -252,30 +252,19 @@ int main (void)
 
 	logit("ft_memcpy");
 
-	char	memc1[3];
-	char	memc2[3];
+	char	memc1[10]	= "123456789";
+	char	memc2[5]	= "abcd";
 
-	ft_bzero(memc2, 3);
+	printf("str1 = %s\n", memc1);
+	printf("str2 = %s\n", memc2);
+	printf("str1 : %3d %3d %3d %3d %3d\n", memc1[0], memc1[1], memc1[2], memc1[3], memc1[4]);
+	printf("str2 : %3d %3d %3d %3d %3d\n", memc2[0], memc2[1], memc2[2], memc2[3], memc2[4]);
+	printf("--- memcpy str 2 into str 1, on 3 characters ---\n");
+	ft_memcpy(memc1, memc2, 3);
+	printf("str1 : %3d %3d %3d %3d %3d\n", memc1[0], memc1[1], memc1[2], memc1[3], memc1[4]);
+	printf("str2 : %3d %3d %3d %3d %3d\n", memc2[0], memc2[1], memc2[2], memc2[3], memc2[4]);
+	printf("\n");
 
-	memc1[0] = 'a';
-	memc1[1] = 'b';
-	memc1[2] = 'c';
-
-	printf("str 1 [0] = %c (%d)\n", memc1[0], memc1[0]);
-	printf("str 1 [1] = %c (%d)\n", memc1[1], memc1[1]);
-	printf("str 1 [2] = %c (%d)\n", memc1[2], memc1[2]);
-	printf("\n");
-	printf("str 2 [0] = %c (%d)\n", memc2[0], memc2[0]);
-	printf("str 2 [1] = %c (%d)\n", memc2[1], memc2[1]);
-	printf("str 2 [2] = %c (%d)\n", memc2[2], memc2[2]);
-	printf("\n");
-	printf("--- memcpy str 1 into str 2 ---\n");
-	printf("\n");
-	ft_memcpy(memc2, memc1, 3);
-	printf("str 2 [0] = %c (%d)\n", memc2[0], memc2[0]);
-	printf("str 2 [1] = %c (%d)\n", memc2[1], memc2[1]);
-	printf("str 2 [2] = %c (%d)\n", memc2[2], memc2[2]);
-	printf("\n");
 	printf("--- test with null ---\n");
 	ft_memcpy(memc2, NULL, 3);
 	ft_memcpy(NULL, memc1, 3);
