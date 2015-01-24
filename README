@@ -1,0 +1,22 @@
+libftasm
+--------
+
+part 1:
+
+	[x] bzero
+	[ ] strcat
+	[x] isalpha
+	[x] isdigit
+	[x] isalnum
+	[x] isascii
+	[x] isprint
+	[x] toupper
+	[x] tolower
+	[x] puts
+
+part 2:
+
+	[x] strlen
+	[ ] memset
+	[ ] memcpy
+	[ ] strdup
