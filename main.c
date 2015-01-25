@@ -19,11 +19,46 @@
 #include <string.h>
 #include "libftasm.h"
 
-void logit (char * str);
+void logit 				(char * str);
+
+void test_ft_bzero 		(void);
+void test_ft_strcat		(void);
+void test_ft_isalpha	(void);
+void test_ft_isdigit	(void);
+void test_ft_isalnum	(void);
+void test_ft_isascii	(void);
+void test_ft_isprint	(void);
+void test_ft_toupper	(void);
+void test_ft_tolower	(void);
+void test_ft_puts		(void);
+void test_ft_strlen		(void);
+void test_ft_memset		(void);
+void test_ft_memcpy		(void);
+void test_ft_strdup		(void);
 
 int main (void)
 {
 
+	test_ft_bzero();
+	test_ft_strcat();
+	test_ft_isalpha();
+	test_ft_isdigit();
+	test_ft_isalnum();
+	test_ft_isascii();
+	test_ft_isprint();
+	test_ft_toupper();
+	test_ft_tolower();
+	test_ft_puts();
+	test_ft_strlen();
+	test_ft_memset();
+	test_ft_memcpy();
+
+	printf("\n");
+	return (0);
+}
+
+void test_ft_bzero (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_bzero
@@ -48,7 +83,10 @@ int main (void)
 	printf("test with null\n");
 	ft_bzero(NULL, 5);
 	printf("aucun segfault\n");
+}
 
+void test_ft_strlen (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_strlen
@@ -66,7 +104,10 @@ int main (void)
 
 	printf("str = %s\n", str3);
 	printf("len = %d\n", ft_strlen(str3));
+}
 
+void test_ft_isalpha (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_isalpha
@@ -87,7 +128,10 @@ int main (void)
 	printf("%c %d\n", '!', ft_isalpha('!'));
 	printf("%c %d\n", '[', ft_isalpha('['));
 	printf("%c %d\n", '{', ft_isalpha('{'));
+}
 
+void test_ft_isdigit (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_isdigit
@@ -101,7 +145,10 @@ int main (void)
 	printf("%c %d\n", '0', ft_isdigit('0'));
 	printf("%c %d\n", '/', ft_isdigit('/'));
 	printf("%c %d\n", ':', ft_isdigit(':'));
+}
 
+void test_ft_isalnum (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_isalnum
@@ -128,7 +175,10 @@ int main (void)
 	printf("%c %d\n", '0', ft_isalnum('0'));
 	printf("%c %d\n", '/', ft_isalnum('/'));
 	printf("%c %d\n", ':', ft_isalnum(':'));
+}
 
+void test_ft_isascii (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_isascii
@@ -142,7 +192,10 @@ int main (void)
 	printf("%c %d\n", 0, ft_isascii(0));
 	printf("%c %d\n", 127, ft_isascii(127));
 	printf("%c %d\n", 128, ft_isascii(128));
+}
 
+void test_ft_isprint (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_isprint
@@ -154,7 +207,10 @@ int main (void)
 	printf("%c %d\n", 32, ft_isprint(32));
 	printf("%c %d\n", 33, ft_isprint(33));
 	printf("%c %d\n", 128, ft_isprint(128));
+}
 
+void test_ft_toupper (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_toupper
@@ -170,7 +226,10 @@ int main (void)
 	printf("%c --> %c\n", 'A', ft_toupper('A'));
 	printf("%c --> %c\n", '2', ft_toupper('2'));
 	printf("%c --> %c\n", '-', ft_toupper('-'));
+}
 
+void test_ft_tolower (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_tolower
@@ -186,7 +245,10 @@ int main (void)
 	printf("%c --> %c\n", 'A', ft_tolower('A'));
 	printf("%c --> %c\n", '2', ft_tolower('2'));
 	printf("%c --> %c\n", '-', ft_tolower('-'));
+}
 
+void test_ft_puts (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_puts
@@ -196,7 +258,10 @@ int main (void)
 	logit("ft_puts");
 
 	ft_puts("foo bar baz");
+}
 
+void test_ft_strcat (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_strcat
@@ -221,7 +286,10 @@ int main (void)
 	printf("string 1 = %s\n", toto);
 	printf("string 2 = %s\n", tata);
 	printf("  result = %s\n", ft_strcat(toto, tata));
+}
 
+void test_ft_memset (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_memset
@@ -243,7 +311,10 @@ int main (void)
 	printf("str[1] = %c (%d)\n", mems[1], mems[1]);
 	printf("str[2] = %c (%d)\n", mems[2], mems[2]);
 	printf("str[3] = %c (%d)\n", mems[3], mems[3]);
+}
 
+void test_ft_memcpy (void)
+{
 	/**
 	** -------------------------------------------------------------------------
 	** ft_memcpy
@@ -269,9 +340,6 @@ int main (void)
 	ft_memcpy(memc2, NULL, 3);
 	ft_memcpy(NULL, memc1, 3);
 	printf("--- no segfault ---\n");
-
-	printf("\n");
-	return (0);
 }
 
 void logit (char * str)
