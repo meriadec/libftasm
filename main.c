@@ -52,6 +52,7 @@ int main (void)
 	test_ft_strlen();
 	test_ft_memset();
 	test_ft_memcpy();
+	test_ft_strdup();
 
 	printf("\n");
 	return (0);
@@ -358,6 +359,23 @@ void test_ft_memcpy (void)
 	ft_memcpy(&b, &a, sizeof(int));
 	printf("a = %d\n", a);
 	printf("b = %d\n", b);
+}
+
+void test_ft_strdup (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strdup
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strdup");
+
+	char * tata = strdup("yolo");
+	char * toto = ft_strdup(tata);
+	printf(" original string : [%p] [%s]\n", tata, tata);
+	printf("duplicate string : [%p] [%s]\n", toto, toto);
+
 }
 
 void logit (char * str)
