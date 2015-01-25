@@ -26,15 +26,9 @@ _ft_memcpy:
 	jz end
 	cmp rdx, 0
 	jz end
-	mov rax, 0
-
-lp:
-	cmp rax, rdx
-	jz end
-	mov r8, [rsi+rax]
-	mov [rdi+rax], r8
-	inc rax
-	jmp lp
+	mov rcx, rdx
+	cld
+	rep movsb
 
 end:
 	mov rax, rdi

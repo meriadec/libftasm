@@ -328,10 +328,16 @@ void test_ft_memcpy (void)
 
 	printf("str1 = %s\n", memc1);
 	printf("str2 = %s\n", memc2);
+	printf("\n");
 	printf("str1 : %3d %3d %3d %3d %3d\n", memc1[0], memc1[1], memc1[2], memc1[3], memc1[4]);
 	printf("str2 : %3d %3d %3d %3d %3d\n", memc2[0], memc2[1], memc2[2], memc2[3], memc2[4]);
+	printf("\n");
 	printf("--- memcpy str 2 into str 1, on 3 characters ---\n");
+	printf("\n");
 	ft_memcpy(memc1, memc2, 3);
+	printf("str1 = %s\n", memc1);
+	printf("str2 = %s\n", memc2);
+	printf("\n");
 	printf("str1 : %3d %3d %3d %3d %3d\n", memc1[0], memc1[1], memc1[2], memc1[3], memc1[4]);
 	printf("str2 : %3d %3d %3d %3d %3d\n", memc2[0], memc2[1], memc2[2], memc2[3], memc2[4]);
 	printf("\n");
@@ -340,6 +346,18 @@ void test_ft_memcpy (void)
 	ft_memcpy(memc2, NULL, 3);
 	ft_memcpy(NULL, memc1, 3);
 	printf("--- no segfault ---\n");
+
+	printf("\n");
+	printf("test with int\n");
+
+	int a = 5;
+	int b = 4;
+	printf("a = %d\n", a);
+	printf("b = %d\n", b);
+	printf("--- memcpy a into b ---\n");
+	ft_memcpy(&b, &a, sizeof(int));
+	printf("a = %d\n", a);
+	printf("b = %d\n", b);
 }
 
 void logit (char * str)
