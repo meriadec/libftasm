@@ -22,15 +22,12 @@ section .text
 _ft_memset:
 	cmp rdi, 0
 	jz end
-	mov rcx, rdi
-
-lp:
 	cmp rdx, 0
-	jle end
-	mov [rcx], rsi
-	inc rcx
-	dec rdx
-	jmp lp
+	jz end
+	mov rax, rsi
+	mov rcx, rdx
+	cld
+	rep stosb
 
 end:
 	mov rax, rdi
