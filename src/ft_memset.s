@@ -20,15 +20,12 @@ global _ft_memset
 section .text
 
 _ft_memset:
-	cmp rdi, 0
-	jz end
-	cmp rdx, 0
-	jz end
+	push rdi
 	mov rax, rsi
 	mov rcx, rdx
 	cld
 	rep stosb
 
 end:
-	mov rax, rdi
+	pop rax
 	ret
