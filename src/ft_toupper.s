@@ -20,9 +20,6 @@ global _ft_toupper
 section .text
 
 _ft_toupper:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, rdi
 	cmp rax, 97
 	js end
@@ -31,6 +28,4 @@ _ft_toupper:
 	sub rax, 32
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

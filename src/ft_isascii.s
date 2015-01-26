@@ -20,9 +20,6 @@ global _ft_isascii
 section .text
 
 _ft_isascii:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, 1
 	cmp rdi, 0
 	js nop
@@ -38,6 +35,4 @@ yep:
 	jmp end
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

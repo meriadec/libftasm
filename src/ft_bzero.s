@@ -20,9 +20,6 @@ global _ft_bzero
 section .text
 
 _ft_bzero:
-	push rbp
-	mov rbp, rsp
-	; core
 	cmp rdi, 0
 	jz end
 	mov rbx, rdi
@@ -38,6 +35,4 @@ bzero_loop:
 	jmp bzero_loop
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

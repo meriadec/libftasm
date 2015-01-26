@@ -20,9 +20,6 @@ global _ft_tolower
 section .text
 
 _ft_tolower:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, rdi
 	cmp rax, 65
 	js end
@@ -31,6 +28,4 @@ _ft_tolower:
 	add rax, 32
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

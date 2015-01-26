@@ -20,9 +20,6 @@ global _ft_isalpha
 section .text
 
 _ft_isalpha:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, 1
 	cmp rdi, 65
 	js nop
@@ -42,6 +39,4 @@ yep:
 	jmp end
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

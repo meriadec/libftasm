@@ -20,9 +20,6 @@ global _ft_isprint
 section .text
 
 _ft_isprint:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, 1
 	cmp rdi, 32
 	js nop
@@ -38,6 +35,4 @@ yep:
 	jmp end
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret

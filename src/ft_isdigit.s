@@ -20,9 +20,6 @@ global _ft_isdigit
 section .text
 
 _ft_isdigit:
-	push rbp
-	mov rbp, rsp
-	; core
 	mov rax, 1
 	cmp rdi, 48
 	js nop
@@ -38,6 +35,4 @@ yep:
 	jmp end
 
 end:
-	mov rsp, rbp
-	pop rbp
 	ret
