@@ -27,9 +27,8 @@ _ft_strdup:
 	; prologue
 	push rbp
 	mov rbp, rsp
-	; test NULL
-	cmp rdi, 0
-	jz end
+	push rsi
+	push rdi
 	; get length, and saves it into stack
 	call _ft_strlen
 	push rax
@@ -37,12 +36,13 @@ _ft_strdup:
 	mov rdi, rax
 	call _malloc
 	; prepare and call memcpy
-	mov rsi, rdi
 	mov rdi, rax
 	pop rdx
+	pop rsi
 	call _ft_memcpy
 
 end:
+	pop rsi
 	mov rsp, rbp
 	pop rbp
 	ret
