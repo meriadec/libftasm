@@ -26,7 +26,7 @@ _ft_tolower:
 	mov rax, rdi
 	cmp rax, 65
 	js end
-	cmp rax, 90
+	cmp rax, 91
 	jns end
 	add rax, 32
 

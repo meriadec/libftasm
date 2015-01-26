@@ -26,7 +26,7 @@ _ft_isprint:
 	mov rax, 1
 	cmp rdi, 32
 	js nop
-	cmp rdi, 128
+	cmp rdi, 127
 	js yep
 
 nop:
