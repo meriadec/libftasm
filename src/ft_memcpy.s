@@ -20,16 +20,11 @@ global _ft_memcpy
 section .text
 
 _ft_memcpy:
-	cmp rdi, 0
-	jz end
-	cmp rsi, 0
-	jz end
-	cmp rdx, 0
-	jz end
+	push rdi
 	mov rcx, rdx
 	cld
 	rep movsb
 
 end:
-	mov rax, rdi
+	pop rax
 	ret
