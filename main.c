@@ -281,12 +281,6 @@ void test_ft_strcat (void)
 	printf("string 2 = %s\n", chips);
 	printf("  result = %s\n", ft_strcat(toast, chips));
 
-	char * toto = NULL;
-	char * tata = NULL;
-
-	printf("string 1 = %s\n", toto);
-	printf("string 2 = %s\n", tata);
-	printf("  result = %s\n", ft_strcat(toto, tata));
 }
 
 void test_ft_memset (void)
@@ -342,11 +336,6 @@ void test_ft_memcpy (void)
 	printf("str1 : %3d %3d %3d %3d %3d\n", memc1[0], memc1[1], memc1[2], memc1[3], memc1[4]);
 	printf("str2 : %3d %3d %3d %3d %3d\n", memc2[0], memc2[1], memc2[2], memc2[3], memc2[4]);
 	printf("\n");
-
-	printf("--- test with null ---\n");
-	ft_memcpy(memc2, NULL, 3);
-	ft_memcpy(NULL, memc1, 3);
-	printf("--- no segfault ---\n");
 
 	printf("\n");
 	printf("test with int\n");
