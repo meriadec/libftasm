@@ -17,6 +17,7 @@
 
 NAME			= libfts.a
 TEST			= test
+TEST_CAT		= ft_cat
 
 CC				= gcc
 CC_ASM			= nasm
@@ -38,6 +39,7 @@ SRC				= $(DIR_SRC)/ft_bzero.s \
 				  $(DIR_SRC)/ft_memset.s \
 				  $(DIR_SRC)/ft_memcpy.s \
 				  $(DIR_SRC)/ft_strdup.s \
+				  $(DIR_SRC)/ft_cat.s \
 
 DIR_SRC			= src
 DIR_INC			= inc
@@ -92,6 +94,12 @@ $(TEST): $(NAME) main.c
 	@$(CC) $(INCS) -L . -lfts main.c -o $@
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created test"
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+
+$(TEST_CAT): $(NAME) main_cat.c
+	@$(CC) $(INCS) -L . -lfts main_cat.c -o $@
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created ft_cat"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 
 .PHONY:	clean fclean re
