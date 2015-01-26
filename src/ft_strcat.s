@@ -22,8 +22,6 @@ extern _ft_strlen
 section .text
 
 _ft_strcat:
-	cmp rdi, 0
-	jz end
 	call _ft_strlen
 	mov rcx, 0
 
@@ -37,5 +35,7 @@ lp:
 	jmp lp
 
 end:
+	mov r8, 0
+	mov [rdi+rax], r8
 	mov rax, rdi
 	ret

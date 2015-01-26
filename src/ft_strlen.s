@@ -23,6 +23,7 @@ _ft_strlen:
 	push rbp
 	mov rbp, rsp
 	; core
+	push rbx
 	mov rax, 0
 	mov rbx, rdi
 
@@ -34,6 +35,7 @@ lp:
 	jmp lp
 
 end:
+	pop rbx
 	mov rsp, rbp
 	pop rbp
 	ret
