@@ -44,9 +44,8 @@ read:
 	; READ
 	syscall
 
-	; exit if eof
-	cmp rax, 0
-	je end
+	; out if err
+	jc err
 
 	; exit if eof
 	cmp rax, 0
@@ -64,11 +63,18 @@ read:
 	; WRITE
 	syscall
 
+	; out if err
+	jc err
+
 	; recuperate fd
 	pop rdi
 
 	; loop
 	jmp read
+
+err:
+	pop rdi
+	mov rax, 1
 
 end:
 

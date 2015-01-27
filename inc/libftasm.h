@@ -36,6 +36,6 @@ int					ft_puts		(char * const str);
 char *				ft_strcat	(char * s1, const char * s2);
 char *				ft_strdup	(const char *s1);
 
-void				ft_cat		(int fd);
+int					ft_cat		(int fd);
 
 #endif
