@@ -19,4 +19,8 @@ part 2:
 	[x] strlen
 	[x] memset
 	[x] memcpy
-	[ ] strdup
+	[x] strdup
+
+part 3:
+
+	[x] cat
