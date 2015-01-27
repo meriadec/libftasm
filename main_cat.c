@@ -16,10 +16,20 @@
 /* ========================================================================== */
 
 #include <stdio.h>
+#include <fcntl.h>
 #include "libftasm.h"
 
-int main(void)
+int main(int ac, char ** av)
 {
-	ft_cat(0);
+	if (ac == 1) {
+		ft_cat(0);
+	}
+	else if (ac == 2) {
+		int fd = open(av[1], O_RDONLY);
+		ft_cat(fd);
+	}
+	else {
+		printf("usage: %s [file]\n", av[0]);
+	}
 	return (0);
 }

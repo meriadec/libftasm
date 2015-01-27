@@ -17,6 +17,8 @@
 
 global _ft_cat
 
+extern _ft_strlen
+
 section .text
 
 _ft_cat:
@@ -25,16 +27,48 @@ _ft_cat:
 	push rbp
 	mov rbp, rsp
 
+read:
+
 	; put rax to `read` sys call
-	mov rax, 3
+	mov rax, 0x2000003
+
+	; backup fd
+	push rdi
+
+	; string buf
+	mov rsi, buffer
+
+	; buf size
+	mov rdx, bufsize
+
+	; READ
+	syscall
+
+	; exit if eof
+	cmp rax, 0
+	je end
+
+	; exit if eof
+	cmp rax, 0
+	je end
 
 	; file descriptor
-	mov rbx, 0
+	mov rdi, 1
 
-	; access rights
-	mov rcx, fileaccess
+	; size to write
+	mov rdx, rax
 
-	mov rdx, 26
+	; put rax to `read` sys call
+	mov rax, 0x2000004
+
+	; WRITE
+	syscall
+
+	; recuperate fd
+	pop rdi
+
+	; loop
+	jmp read
 
 end:
 
@@ -46,4 +80,5 @@ end:
 
 section .data
 
-fileaccess resb 26
+buffer times 255 db 0
+bufsize equ $ - buffer
