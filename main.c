@@ -35,6 +35,7 @@ void test_ft_strlen		(void);
 void test_ft_memset		(void);
 void test_ft_memcpy		(void);
 void test_ft_strdup		(void);
+void test_ft_indexof	(void);
 
 int main (void)
 {
@@ -53,6 +54,7 @@ int main (void)
 	test_ft_memset();
 	test_ft_memcpy();
 	test_ft_strdup();
+	test_ft_indexof();
 
 	printf("\n");
 	return (0);
@@ -364,6 +366,22 @@ void test_ft_strdup (void)
 	char * toto = ft_strdup(tata);
 	printf(" original string : [%p] [%s]\n", tata, tata);
 	printf("duplicate string : [%p] [%s]\n", toto, toto);
+
+}
+
+void test_ft_indexof (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_indexof
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_indexof");
+
+	printf("index of [%c] into [%s] = %2d\n", 'c', "adcde", ft_indexof('c', "abcde"));
+	printf("index of [%c] into [%s] = %2d\n", 'c', "ooooo", ft_indexof('c', "ooooo"));
+	printf("index of [%c] into [%s] = %2d\n", 'o', "ooooo", ft_indexof('o', "ooooo"));
 
 }
 

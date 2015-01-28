@@ -38,4 +38,10 @@ char *				ft_strdup	(const char *s1);
 
 int					ft_cat		(int fd);
 
+/**
+** Bonus functions
+*/
+
+int					ft_indexof	(char c, char * str);
+
 #endif
