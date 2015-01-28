@@ -28,5 +28,5 @@ part 3:
 bonus:
 
 	[x] indexof
-	[x] streq
+	[x] strequ
 	[x] strchr
