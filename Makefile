@@ -17,7 +17,7 @@
 
 NAME			= libfts.a
 TEST			= test
-TEST_CAT		= ft_cat
+TEST_CAT		= cat
 
 CC				= gcc
 CC_ASM			= nasm
@@ -99,7 +99,7 @@ $(TEST): $(NAME) main.c
 $(TEST_CAT): $(NAME) main_cat.c
 	@$(CC) $(INCS) -L . -lfts main_cat.c -o $@
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
-	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created ft_cat"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created cat"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 
 .PHONY:	clean fclean re

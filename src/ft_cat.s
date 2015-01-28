@@ -57,7 +57,7 @@ read:
 	; size to write
 	mov rdx, rax
 
-	; put rax to `read` sys call
+	; put rax to `write` sys call
 	mov rax, 0x2000004
 
 	; WRITE

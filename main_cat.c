@@ -31,6 +31,8 @@ int main(int ac, char ** av)
 		ret = ft_cat(fd);
 		if (fd != -1) {
 			close(fd);
+		} else {
+			printf("error\n");
 		}
 	}
 	else {
