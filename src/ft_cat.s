@@ -36,7 +36,7 @@ read:
 	push rdi
 
 	; string buf
-	mov rsi, buffer
+	lea rsi, [rel buffer]
 
 	; buf size
 	mov rdx, bufsize

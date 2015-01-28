@@ -32,7 +32,7 @@ _ft_puts:
 
 	mov rdx, 1
 	mov rax, 0x2000004
-	mov rsi, newline
+	lea rsi, [rel newline]
 	syscall
 
 end:
