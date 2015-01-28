@@ -43,6 +43,7 @@ SRC				= $(DIR_SRC)/ft_bzero.s \
 				  $(DIR_SRC)/ft_cat.s \
 				  $(DIR_SRC)/ft_indexof.s \
 				  $(DIR_SRC)/ft_strequ.s \
+				  $(DIR_SRC)/ft_strchr.s \
 
 DIR_SRC			= src
 DIR_INC			= inc

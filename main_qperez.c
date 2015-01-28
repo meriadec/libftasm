@@ -156,8 +156,8 @@ int					main(void)
 //	D_ADD_TEST(strncat);
 //#define	D_STRLCAT
 //	D_ADD_TEST(strlcat);
-//#define	D_STRCHR
-//	D_ADD_TEST(strchr);
+#define	D_STRCHR
+	D_ADD_TEST(strchr);
 //#define	D_STRRCHR
 //	D_ADD_TEST(strrchr);
 //#define	D_STRSTR

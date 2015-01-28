@@ -37,6 +37,7 @@ void test_ft_memcpy		(void);
 void test_ft_strdup		(void);
 void test_ft_indexof	(void);
 void test_ft_strequ		(void);
+void test_ft_strchr		(void);
 
 int main (void)
 {
@@ -57,6 +58,7 @@ int main (void)
 	test_ft_strdup();
 	test_ft_indexof();
 	test_ft_strequ();
+	test_ft_strchr();
 
 	printf("\n");
 	return (0);
@@ -400,6 +402,22 @@ void test_ft_strequ (void)
 	printf("[abc] == [def] ? %d\n", ft_strequ("abc", "def"));
 	printf("[abc] == [abc] ? %d\n", ft_strequ("abc", "abc"));
 	printf("[]    == [def] ? %d\n", ft_strequ("", "def"));
+
+}
+
+void test_ft_strchr (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strchr
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strchr");
+
+	printf("searching [%c] into [%s] ==> [%s]\n", 'a', "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 'a'));
+	printf("searching [%c] into [%s] ==> [%s]\n", 'b', "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 'b'));
+	printf("searching [%c] into [%s] ==> [%s]\n", 0, "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 0));
 
 }
 
