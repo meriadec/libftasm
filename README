@@ -30,3 +30,4 @@ bonus:
 	[x] indexof
 	[x] strequ
 	[x] strchr
+	[x] strclr

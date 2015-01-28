@@ -38,6 +38,7 @@ void test_ft_strdup		(void);
 void test_ft_indexof	(void);
 void test_ft_strequ		(void);
 void test_ft_strchr		(void);
+void test_ft_strclr		(void);
 
 int main (void)
 {
@@ -59,6 +60,7 @@ int main (void)
 	test_ft_indexof();
 	test_ft_strequ();
 	test_ft_strchr();
+	test_ft_strclr();
 
 	printf("\n");
 	return (0);
@@ -418,6 +420,24 @@ void test_ft_strchr (void)
 	printf("searching [%c] into [%s] ==> [%s]\n", 'a', "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 'a'));
 	printf("searching [%c] into [%s] ==> [%s]\n", 'b', "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 'b'));
 	printf("searching [%c] into [%s] ==> [%s]\n", 0, "zzzzzaxxxxxx", ft_strchr("zzzzzaxxxxxx", 0));
+
+}
+
+void test_ft_strclr (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strclr
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strclr");
+
+	char toto[] = "yalah";
+
+	printf("before strclr = [%s]\n", toto);
+	ft_strclr(toto);
+	printf(" after strclr = [%s]\n", toto);
 
 }
 

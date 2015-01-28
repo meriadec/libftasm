@@ -190,8 +190,8 @@ int					main(void)
 //	D_ADD_TEST(strnew);
 //#define	D_STRDEL
 //	D_ADD_TEST(strdel);
-//#define	D_STRCLR
-//	D_ADD_TEST(strclr);
+#define	D_STRCLR
+	D_ADD_TEST(strclr);
 //#define	D_STRITER
 //	D_ADD_TEST(striter);
 //#define	D_STRITERI
