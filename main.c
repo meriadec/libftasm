@@ -39,6 +39,7 @@ void test_ft_indexof	(void);
 void test_ft_strequ		(void);
 void test_ft_strchr		(void);
 void test_ft_strclr		(void);
+void test_ft_strcmp		(void);
 
 int main (void)
 {
@@ -61,6 +62,7 @@ int main (void)
 	test_ft_strequ();
 	test_ft_strchr();
 	test_ft_strclr();
+	test_ft_strcmp();
 
 	printf("\n");
 	return (0);
@@ -445,6 +447,23 @@ void test_ft_strclr (void)
 	printf("before strclr = [%s]\n", toto);
 	ft_strclr(toto);
 	printf(" after strclr = [%s]\n", toto);
+
+}
+
+void test_ft_strcmp (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strcmp
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strcmp");
+
+	printf("cmp [abc] [def] ? %d\n", ft_strcmp("abc", "def"));
+	printf("cmp [abc] [abc] ? %d\n", ft_strcmp("abc", "abc"));
+	printf("cmp [def] []    ? %d\n", ft_strcmp("def", ""));
+
 
 }
 

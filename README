@@ -31,3 +31,4 @@ bonus:
 	[x] strequ
 	[x] strchr
 	[x] strclr
+	[x] strcmp

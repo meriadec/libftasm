@@ -164,8 +164,8 @@ int					main(void)
 //	D_ADD_TEST(strstr);
 //#define	D_STRNSTR
 //	D_ADD_TEST(strnstr);
-//#define	D_STRCMP
-//	D_ADD_TEST(strcmp);
+#define	D_STRCMP
+	D_ADD_TEST(strcmp);
 //#define	D_STRNCMP
 //	D_ADD_TEST(strncmp);
 //#define	D_ATOI
