@@ -75,6 +75,7 @@ fclean : clean
 	@if [ -e '$(NAME)' ]; then \
 		/bin/rm -f $(NAME); \
 		/bin/rm -f $(TEST); \
+		/bin/rm -f $(TEST_CAT); \
 		printf "\e[32m[✔]\e[0m project %s fcleaned.\n" $(NAME); \
 		fi
 
