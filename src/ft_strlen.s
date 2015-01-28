@@ -20,22 +20,23 @@ global _ft_strlen
 section .text
 
 _ft_strlen:
+	; prologue
 	push rbp
 	mov rbp, rsp
 	; core
-	push rbx
-	mov rax, 0
-	mov rbx, rdi
-
-lp:
-	cmp byte[rbx], 0x0
-	jz end
-	inc rax
-	inc rbx
-	jmp lp
+	push rdi
+	sub rcx, rcx
+	not rcx
+	sub al, al
+	cld
+	repne scasb
+	not rcx
+	dec rcx
+	mov rax, rcx
 
 end:
-	pop rbx
+	pop rdi
+	; epilogue
 	mov rsp, rbp
 	pop rbp
 	ret
