@@ -370,8 +370,15 @@ void test_ft_strdup (void)
 
 	char * tata = strdup("yolo");
 	char * toto = ft_strdup(tata);
+	char * titi = NULL;
+
 	printf(" original string : [%p] [%s]\n", tata, tata);
 	printf("duplicate string : [%p] [%s]\n", toto, toto);
+
+	printf("test with null :\n");
+	printf("titi = %s\n", titi);
+	titi = ft_strdup(NULL);
+	printf("titi = %s\n", titi);
 
 }
 

@@ -27,6 +27,11 @@ _ft_strdup:
 	; prologue
 	push rbp
 	mov rbp, rsp
+
+	mov rax, 0
+	cmp rdi, 0
+	je end
+
 	push rsi
 	push rdi
 	; get length, and saves it into stack
@@ -40,9 +45,9 @@ _ft_strdup:
 	pop rdx
 	pop rsi
 	call _ft_memcpy
+	pop rsi
 
 end:
-	pop rsi
 	mov rsp, rbp
 	pop rbp
 	ret

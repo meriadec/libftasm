@@ -24,6 +24,8 @@ _ft_strlen:
 	push rbp
 	mov rbp, rsp
 	; core
+	cmp rdi, 0
+	je ifnull
 	push rdi
 	sub rcx, rcx
 	not rcx
@@ -33,6 +35,10 @@ _ft_strlen:
 	not rcx
 	dec rcx
 	mov rax, rcx
+	jmp end
+
+ifnull:
+	mov rax, 0
 
 end:
 	pop rdi
