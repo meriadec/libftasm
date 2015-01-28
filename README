@@ -24,3 +24,8 @@ part 2:
 part 3:
 
 	[x] cat
+
+bonus:
+
+	[x] indexof
+	[x] streq

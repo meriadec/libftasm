@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/01/28 12:36:59 by mpillet          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 /*
  *
  *	Salut la nouvelle promo merci de lire README.md et bon courage tout le monde
@@ -212,8 +200,8 @@ int					main(void)
 //	D_ADD_TEST(strmap);
 //#define	D_STRMAPI
 //	D_ADD_TEST(strmapi);
-//#define	D_STREQU
-//	D_ADD_TEST(strequ);
+#define	D_STREQU
+	D_ADD_TEST(strequ);
 //#define	D_STRNEQU
 //	D_ADD_TEST(strnequ);
 //#define	D_STRSUB

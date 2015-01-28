@@ -43,5 +43,6 @@ int					ft_cat		(int fd);
 */
 
 int					ft_indexof	(char c, char * str);
+int					ft_strequ	(char const *s1, char const *s2);
 
 #endif

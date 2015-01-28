@@ -36,6 +36,7 @@ void test_ft_memset		(void);
 void test_ft_memcpy		(void);
 void test_ft_strdup		(void);
 void test_ft_indexof	(void);
+void test_ft_strequ		(void);
 
 int main (void)
 {
@@ -55,6 +56,7 @@ int main (void)
 	test_ft_memcpy();
 	test_ft_strdup();
 	test_ft_indexof();
+	test_ft_strequ();
 
 	printf("\n");
 	return (0);
@@ -382,6 +384,22 @@ void test_ft_indexof (void)
 	printf("index of [%c] into [%s] = %2d\n", 'c', "adcde", ft_indexof('c', "abcde"));
 	printf("index of [%c] into [%s] = %2d\n", 'c', "ooooo", ft_indexof('c', "ooooo"));
 	printf("index of [%c] into [%s] = %2d\n", 'o', "ooooo", ft_indexof('o', "ooooo"));
+
+}
+
+void test_ft_strequ (void)
+{
+	/**
+	** -------------------------------------------------------------------------
+	** ft_strequ
+	** -------------------------------------------------------------------------
+	**/
+
+	logit("ft_strequ");
+
+	printf("[abc] == [def] ? %d\n", ft_strequ("abc", "def"));
+	printf("[abc] == [abc] ? %d\n", ft_strequ("abc", "abc"));
+	printf("[]    == [def] ? %d\n", ft_strequ("", "def"));
 
 }
 
