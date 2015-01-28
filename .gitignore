@@ -1,4 +1,4 @@
 .obj/
 test
 libfts.a
-ft_cat
+cat
