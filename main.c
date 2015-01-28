@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "libftasm.h"
+#include "libfta.h"
 
 void logit 				(char * str);
 

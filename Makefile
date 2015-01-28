@@ -18,6 +18,7 @@
 NAME			= libfts.a
 TEST			= test
 TEST_CAT		= cat
+QPEREZ			= qperez
 
 CC				= gcc
 CC_ASM			= nasm
@@ -76,6 +77,7 @@ fclean : clean
 		/bin/rm -f $(NAME); \
 		/bin/rm -f $(TEST); \
 		/bin/rm -f $(TEST_CAT); \
+		/bin/rm -f $(QPEREZ); \
 		printf "\e[32m[✔]\e[0m project %s fcleaned.\n" $(NAME); \
 		fi
 
@@ -101,6 +103,12 @@ $(TEST_CAT): $(NAME) main_cat.c
 	@$(CC) $(INCS) -L . -lfts main_cat.c -o $@
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created cat"
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+
+$(QPEREZ): $(NAME) main_qperez.c
+	@$(CC) $(INCS) -L . -lfts main_qperez.c -o $@
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created qperez"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 
 .PHONY:	clean fclean re

@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "libftasm.h"
+#include "libfta.h"
 
 int main(int ac, char ** av)
 {
